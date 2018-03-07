@@ -1,0 +1,56 @@
+{
+  "name": "vbulma",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.4",
+    "@fortawesome/fontawesome-free-solid": "^5.0.8",
+    "@fortawesome/vue-fontawesome": "0.0.22",
+    "axios": "^0.18.0",
+    "bulma": "^0.6.2",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "style-loader": "^0.20.2",
+    "v-money": "^0.8.1",
+    "v-tooltip": "^2.0.0-rc.31",
+    "vue": "^2.5.13",
+    "vue-focus": "^2.1.0",
+    "vue-shortkey": "^3.1.0",
+    "vue-the-mask": "^0.11.1",
+    "vuex": "^3.0.1",
+    "vuex-loading": "^0.2.6"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-beta.5",
+    "@vue/cli-plugin-eslint": "^3.0.0-beta.5",
+    "@vue/cli-service": "^3.0.0-beta.5",
+    "vue-template-compiler": "^2.5.13"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ]
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ]
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
+}

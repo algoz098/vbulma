@@ -1,0 +1,7 @@
+{
+  "teste":  { "tooltip": "Este é um tooltip", "addon": "Esta ajuda aparece no adicional"},
+  "teste1": { "tooltip": "Este é um tooltip", "help": "Esta é uma ajuda"},
+  "teste2": { "tooltip": "Este é um tooltip"},
+  "teste3": { "addon": "Esta ajuda aparece no adicional" },
+  "teste4": { "help": "Esta é uma ajuda" }
+}
