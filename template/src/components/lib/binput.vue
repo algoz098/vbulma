@@ -51,6 +51,7 @@ export default {
         )
       }
 
+      // After build the label and it's content, push it to the overall content var
       content.push(
         h('label', {class: 'label'}, data)
       )
@@ -58,6 +59,7 @@ export default {
       data = []
     }
 
+    // Check if anything in the left of the input, and build it
     if(this.showLeft()){
       props = {}
 
@@ -66,8 +68,10 @@ export default {
       )
     }
 
+    // Create the array for the vue components for the input itself
     var inputArray = []
 
+    // Build the class, binds the data, the directives if any and the events for the input
     var inputData = {
       class:[
         'input',
@@ -95,11 +99,13 @@ export default {
       ]
     }
 
+    // if using mask, put the directive by vueTheMask
     if(this.mask){
       inputData.directives.push({
         name: 'mask',
         value: this.mask,
       })
+      // if using money, put the directive by vMoney
     } else if(this.money){
       inputData.directives.push({
         name: 'money',
@@ -107,6 +113,7 @@ export default {
       })
     }
 
+    // if any shortkey, put the directive
     if (this.shortkey){
       inputData.directive.push({
         name: 'shortkey',
@@ -116,7 +123,7 @@ export default {
     }
 
     var self = this
-
+    // bind the events with the functions
     inputData.on = {
       input(e){
         self.on_input(e)
@@ -144,10 +151,12 @@ export default {
       }
     }
 
+    // Create the input
     inputArray.push(
       h('input', inputData, '')
     )
 
+    // add the left if exists
     if(this.iLeft){
       var iconLeft = [h('icon', {props: {i: this.iLeft}}, '')]
 
@@ -156,6 +165,7 @@ export default {
       )
     }
 
+    //add the internal icon on the right
     if(this.showIconRight()){
       var iRight = []
 
@@ -165,6 +175,7 @@ export default {
         )
       }
 
+      // if there's a error on the validation, add a icon
       if(this.errors && this.errors[this.name]){
         iRight.push(
           h('icon', {props: {i: 'exclamation-triangle', danger: true}}, '')
@@ -190,7 +201,7 @@ export default {
       }
 
       var slotTooltip = [h('div', {slot: 'tooltip'}, this.get_tooltip())]
-      slotTooltip .push(
+      slotTooltip.push(
         h('template', {slot: 'default'}, inputArray_holder)
       )
 
@@ -199,6 +210,7 @@ export default {
       )
     }
 
+    // the input holder element
     data.push(
       h('div', {class: [
         'control',
@@ -208,6 +220,7 @@ export default {
       ]}, inputArray)
     )
 
+    //add elements on the right
     if(this.showRight()){
       props = {}
 

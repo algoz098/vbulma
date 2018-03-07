@@ -1,4 +1,3 @@
-
 <script>
 
 import { focus } from 'vue-focus';
@@ -20,6 +19,7 @@ export default {
     i:        null,
     link:     null,
     shortkey: null,
+    click:    null,
     modId:    {default: '', type: String},
     tabindex: {default: '-1', type: String},
     type:     {default: 'button', type: String},
@@ -54,12 +54,14 @@ export default {
       if(this.link){
         this.$router.push(this.link)
       } else {
-        this.$emit('click')
+        this.$emit('click', this.click)
       }
     },
+
     on_focus() {
       this.$store.commit('SET_FOCUS', this.moddedId)
     },
+
     on_blur() {
 
     },

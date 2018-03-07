@@ -4,8 +4,12 @@
     <div class="columns">
       <div class="column"></div>
 
-      <binput id="teste1" label="aaa" loading="teste" money col="3" v-model.lazy="teste">
-      </binput>
+      <boption :options="[{value: 'a', label: 'a'}, {value: 'b', label: 'b'}]" checkbox label="aaa" v-model="teste">
+        <bbutton i="user" color="primary" slot="right" />
+        <bbutton i="user" color="primary" slot="right" />
+        <bbutton i="user" color="primary" slot="left" />
+        <bbutton i="user" color="primary" slot="left" />
+      </boption>
 
       <div class="column" >teste: {{teste}}</div>
     </div>
