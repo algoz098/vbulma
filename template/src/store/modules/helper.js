@@ -57,11 +57,11 @@ const mutations = {
     })
   },
 
-  ABRIR_MODAL: (state, data) => {
+  OPEN_MODAL: (state, data) => {
     state.modals.push({id: data})
   },
 
-  FECHAR_MODAL: (state) => {
+  CLOSE_MODAL: (state) => {
     state.modals.splice(state.modals.length - 1, 1)
   },
 

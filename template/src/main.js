@@ -19,6 +19,8 @@ Vue.component('bselect', require('./components/lib/bselect.vue').default);
 Vue.component('bdatepicker', require('./components/lib/bdatepicker.vue').default);
 Vue.component('btoast', require('./components/lib/btoast.vue').default);
 Vue.component('bcard', require('./components/lib/bcard.vue').default);
+Vue.component('bmodal', require('./components/lib/bmodal.vue').default);
+Vue.component('bdialog', require('./components/lib/bdialog.vue').default);
 
 Vue.config.productionTip = false
 

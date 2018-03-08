@@ -6,13 +6,10 @@
 
       <div class="column">
 
-        <bcard featured="featured" subfeatured="subtitle">
+        <bdialog mod-id="teste" button-label="algo">
+          Confirmar: ?
 
-          <!-- <icon i="user" slot='icon' /> -->
-
-          default
-
-        </bcard>
+        </bdialog>
 
       </div>
 
