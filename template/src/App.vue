@@ -4,10 +4,20 @@
     <div class="columns">
       <div class="column"></div>
 
-      <bselect :options="[{value: 'a', label: 'a'}, {value: 'b', label: 'b'}]"label="aaa" v-model="teste" >
-      </bselect>
+      <div class="column">
+        <bbutton label="toast" color="info" @click="$store.commit('TOAST', {title: 'titulo', type: 'danger', message: 'Mensage', duration: 100})"/>
+      </div>
 
-      <div class="column" >teste: {{teste}}</div>
+
+      <div class="column" ></div>
+    </div>
+
+
+    <!-- This is the toast place. Do not delete this if using the toast system -->
+    <div class="atoast">
+      <btoast v-for="(toast, index) in toasts" :key="'toast' + index" :title="toast.title" :type="toast.type" :direction="toast.direction" :message="toast.message" :duration="toast.duration"
+        @close="$store.commit('REMOVAL_TOAST', toast)"
+      ></btoast>
     </div>
 
   </div>
@@ -19,6 +29,11 @@ export default {
   data(){
     return {
       teste: []
+    }
+  },
+  computed:{
+    toasts() {
+      return this.$store.state.helper.toasts
     }
   }
 }

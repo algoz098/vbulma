@@ -43,7 +43,7 @@ const actions = {
 
 // mutations
 const mutations = {
-  REMOVER_TOAST: (state, toast) => {
+  REMOVAL_TOAST: (state, toast) => {
     state.toasts.splice(state.toasts.indexOf(toast), 1)
   },
 

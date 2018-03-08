@@ -17,6 +17,7 @@ Vue.component('binput', require('./components/lib/binput.vue').default);
 Vue.component('boption', require('./components/lib/boption.vue').default);
 Vue.component('bselect', require('./components/lib/bselect.vue').default);
 Vue.component('bdatepicker', require('./components/lib/bdatepicker.vue').default);
+Vue.component('btoast', require('./components/lib/btoast.vue').default);
 
 Vue.config.productionTip = false
 
