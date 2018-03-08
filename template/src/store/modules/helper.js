@@ -9,14 +9,13 @@ const state = {
   focus: null,
   helps: {},
   form: {
-    erros: {
-      'email': [
-        'algo'
-      ]
-    }
+    erros: {}
   },
   toasts:[],
-  modals:[]
+  modals:[],
+  menu: {
+    show: false
+  }
 }
 
 // getters
@@ -43,6 +42,10 @@ const actions = {
 
 // mutations
 const mutations = {
+  SHOW_MENU: (state)=>{
+    state.menu.show = !state.menu.show
+  },
+
   REMOVAL_TOAST: (state, toast) => {
     state.toasts.splice(state.toasts.indexOf(toast), 1)
   },

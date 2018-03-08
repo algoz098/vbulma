@@ -1,5 +1,5 @@
 <template>
-  <font-awesome-icon v-if="i" :icon="[type, i]" :spin="spin" />
+  <font-awesome-icon v-if="i" :icon="[type, i]" :spin="spin" :size="size"/>
 </template>
 
 <script>
@@ -12,6 +12,7 @@ export default {
     i: {default: 'user'},
     spin: null,
     type: { default: 'fas', type: String},
+    size: { default: '1x', type: String},
   },
   created() {
     fontawesome.library.add(solid)

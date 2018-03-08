@@ -17,7 +17,7 @@ export default {
 
     // create the most external class object
     parent_data.class = [
-      'column',
+      {'column': !this.horizontal},
       this.collumns()
     ]
 

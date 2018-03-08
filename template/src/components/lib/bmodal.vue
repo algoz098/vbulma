@@ -32,7 +32,7 @@
       <footer class="modal-card-foot" v-if="!noFooter">
         <slot name="footer"></slot>
 
-        <bbutton color="success" label="Salvar" i="save" id="save_button" v-if="saveButton" />&nbsp
+        <bbutton color="success" label="Salvar" i="save" id="save_button" v-if="saveButton" />&nbsp;
 
         <bbutton label="Cacelar" color="normal" id="cancel_button" @click="$store.commit('CLOSE_MODAL')" v-if="cancelButton"/>
       </footer>
@@ -69,6 +69,7 @@ export default {
 
   methods:{
     open(){
+      // eslint-disable-next-line
       this.internalShow = true
 
       this.$emit('open')
@@ -104,6 +105,7 @@ export default {
       }
 
       if(this.internalShow){
+        // eslint-disable-next-line
         this.internalShow = false
 
         this.$emit('close')

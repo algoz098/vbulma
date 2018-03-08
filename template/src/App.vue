@@ -1,28 +1,26 @@
 <template lang="html">
   <div id="app">
+    <bmenu />
+    <bsidemenu search-placeholder="Tela">
 
-    <div class="columns">
-      <div class="column"></div>
+      <div class="columns">
+        <div class="column"></div>
 
-      <div class="column">
+        <div class="column">
 
-        <bdialog mod-id="teste" button-label="algo">
-          Confirmar: ?
+        </div>
 
-        </bdialog>
-
+        <div class="column" ></div>
       </div>
 
-      <div class="column" ></div>
-    </div>
-
-
-    <!-- This is the toast place. Do not delete this if using the toast system -->
-    <div class="atoast">
-      <btoast v-for="(toast, index) in toasts" :key="'toast' + index" :title="toast.title" :type="toast.type" :direction="toast.direction" :message="toast.message" :duration="toast.duration"
+      <!-- This is the toast place. Do not delete this if using the toast system -->
+      <div class="atoast">
+        <btoast v-for="(toast, index) in toasts" :key="'toast' + index" :title="toast.title" :type="toast.type" :direction="toast.direction" :message="toast.message" :duration="toast.duration"
         @close="$store.commit('REMOVAL_TOAST', toast)"
-      ></btoast>
-    </div>
+        ></btoast>
+      </div>
+
+    </bsidemenu>
 
   </div>
 </template>
@@ -35,6 +33,11 @@ export default {
       teste: []
     }
   },
+
+  created(){
+    // document.querySelector('body').style.height = window.innerHeight + 'px'
+  },
+
   computed:{
     toasts() {
       return this.$store.state.helper.toasts
@@ -47,7 +50,12 @@ export default {
   @import '../node_modules/bulma/bulma.sass';
   @import '../node_modules/animate.css/animate.min.css';
 
-  .control.has-icons-left .icon.is-small, .control.has-icons-right .icon.is-small{
+body{
+  background-color: $light;
+  overflow: hidden;
+}
+
+.control.has-icons-left .icon.is-small, .control.has-icons-right .icon.is-small{
   height: 27px;
 }
 

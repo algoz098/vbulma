@@ -21,6 +21,8 @@ Vue.component('btoast', require('./components/lib/btoast.vue').default);
 Vue.component('bcard', require('./components/lib/bcard.vue').default);
 Vue.component('bmodal', require('./components/lib/bmodal.vue').default);
 Vue.component('bdialog', require('./components/lib/bdialog.vue').default);
+Vue.component('bmenu', require('./components/lib/bmenu.vue').default);
+Vue.component('bsidemenu', require('./components/lib/bsidemenu.vue').default);
 
 Vue.config.productionTip = false
 
