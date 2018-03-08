@@ -5,9 +5,16 @@
       <div class="column"></div>
 
       <div class="column">
-        <bbutton label="toast" color="info" @click="$store.commit('TOAST', {title: 'titulo', type: 'danger', message: 'Mensage', duration: 100})"/>
-      </div>
 
+        <bcard featured="featured" subfeatured="subtitle">
+
+          <!-- <icon i="user" slot='icon' /> -->
+
+          default
+
+        </bcard>
+
+      </div>
 
       <div class="column" ></div>
     </div>
@@ -41,6 +48,7 @@ export default {
 
 <style lang="scss">
   @import '../node_modules/bulma/bulma.sass';
+  @import '../node_modules/animate.css/animate.min.css';
 
   .control.has-icons-left .icon.is-small, .control.has-icons-right .icon.is-small{
   height: 27px;
