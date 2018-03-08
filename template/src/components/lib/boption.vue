@@ -77,8 +77,8 @@ export default {
     // Create the buttons inside options object
     var self = this
 
-    for (var i = 0; i < this.options.length; i++) {
-      var item = this.options[i]
+    for (var x = 0; x < this.options.length; x++) {
+      var item = this.options[x]
 
       var itemData = {
         props:{
@@ -87,7 +87,7 @@ export default {
           i: this.icon(item.value),
           noTooltip: true,
           label: item.label,
-          id: this.getId(i),
+          id: this.getId(x),
           disabled: this.disabled,
           readonly: this.readonly,
           tabindex: this.tabindex,
@@ -228,7 +228,7 @@ export default {
     error:          null,
     success:        null,
     help:           null,
-    options:           null,
+    options:        null,
     mask:           null,
     tooltip:        null,
     shortkey:        null,
@@ -295,7 +295,6 @@ export default {
 
     on_input(e){
       var emit = e
-
       if(this.checkbox){
         emit = []
         emit = emit.concat(this.value)
@@ -305,7 +304,6 @@ export default {
         } else {
           emit.push(e)
         }
-
       }
 
       this.$emit('input', emit)

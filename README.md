@@ -14,5 +14,17 @@ Then use the template
 ```
 vue init algoz098/vbulma my-project
 ```
+Access the folder
+```
+cd my-project
+```
+Install dependencies
+```
+npm install
+```
+Start the dev server
+```
+npm run serve
+```
 ## Documentation
 The documentation will come soon. Sorry.
