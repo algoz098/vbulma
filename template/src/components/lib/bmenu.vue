@@ -17,9 +17,11 @@
     </div>
 
     <div class="navbar-end">
-      <!-- <a class="navbar-item">
-        User
-      </a> -->
+
+      <bnav-dropdown title="Me" right>
+
+      </bnav-dropdown>
+
     </div>
   </nav>
 </template>

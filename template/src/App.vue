@@ -15,9 +15,8 @@
 
       <!-- This is the toast place. Do not delete this if using the toast system -->
       <div class="atoast">
-        <btoast v-for="(toast, index) in toasts" :key="'toast' + index" :title="toast.title" :type="toast.type" :direction="toast.direction" :message="toast.message" :duration="toast.duration"
-        @close="$store.commit('REMOVAL_TOAST', toast)"
-        ></btoast>
+        <btoast v-for="(toast, index) in toasts" :key="'toast' + index" :title="toast.title" :type="toast.type" :direction="toast.direction"
+        :message="toast.message" :duration="toast.duration" @close="$store.commit('REMOVAL_TOAST', toast)"></btoast>
       </div>
 
     </bsidemenu>

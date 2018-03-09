@@ -1,6 +1,6 @@
 <template lang="html">
-  <div class="columns is-gapless" :style="'height: ' + height + 'px'">
-    <div class="is-background-white">
+  <div class=" columns is-gapless" :style="'height: ' + height + 'px'">
+    <div class="is-background-white is-clipped is-overflow">
       <nav class="panel">
         <!-- <p class="panel-heading">
           repositories
@@ -14,157 +14,38 @@
           </p>
         </div> -->
 
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
+        <bpanel-link i="star" title="Favorites">
+          <bpanel-link i="user" title="Home" :link="{name: 'home'}" />
+          <bpanel-link i="user" title="Another" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="One" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+        </bpanel-link>
 
-          &nbsp;
+        <bpanel-link i="user" title="Something" :link="{name: 'testing'}" />
+        <bpanel-link i="book" title="Another something" :link="{name: 'tested'}" />
+        <bpanel-link i="book" title="Another something" :link="{name: 'tested'}" />
+        <bpanel-link i="book" title="Another something" :link="{name: 'tested'}" />
+        
+        <bpanel-link i="book" title="Another something" >
+          <bpanel-link i="user" title="Home" :link="{name: 'home'}" />
+          <bpanel-link i="user" title="Another" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="One" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+          <bpanel-link i="user" title="Bites the dust" :link="{name: 'testing'}" />
+        </bpanel-link>
 
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Favorites
-            </span>
-          </transition>
-        </a>
-
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
-
-          &nbsp;
-
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Menu 1
-            </span>
-          </transition>
-        </a>
-
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
-
-          &nbsp;
-
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Menu 1
-            </span>
-          </transition>
-        </a>
-
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
-
-          &nbsp;
-
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Menu 1
-            </span>
-          </transition>
-        </a>
-
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
-
-          &nbsp;
-
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Menu 1
-            </span>
-          </transition>
-        </a>
-
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
-
-          &nbsp;
-
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Menu 1
-            </span>
-          </transition>
-        </a>
-
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
-
-          &nbsp;
-
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Menu 1
-            </span>
-          </transition>
-        </a>
-
-        <a class="panel-block is-active">
-          <span class="panel-icon">
-            <icon i="star" />
-          </span>
-
-          &nbsp;
-
-          <transition
-            name="custom-classes-transition"
-            enter-active-class="animated fadeInLeft"
-            leave-active-class="animated fadeOutLeftBig"
-            mode="out-in"
-          >
-            <span v-if="show">
-              Menu 1
-            </span>
-          </transition>
-        </a>
+        <bpanel-link i="book" title="Another something" :link="{name: 'tested'}" />
+        <bpanel-link i="book" title="Another something" :link="{name: 'tested'}" />
+        <bpanel-link i="book" title="Another something" :link="{name: 'tested'}" />
 
       </nav>
 
@@ -209,5 +90,21 @@ export default {
 <style lang="css">
 .is-background-white{
   background-color: white;
+}
+
+.is-overflow{
+  overflow-y: auto!important;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 </style>
